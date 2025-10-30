@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Academic Medic – SAT Vocab Practice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Academic Medic SAT Vocab</h1>
+    <p class="subtitle">Core 150 • Learn • Practice • Master</p>
+  </header>
+
+  <main class="app">
+    <!-- MODE SWITCHER (for later) -->
+    <nav class="modes">
+      <button class="mode-btn active" data-mode="flashcard">Flashcards</button>
+      <button class="mode-btn" data-mode="multiple">Multiple Choice (soon)</button>
+      <button class="mode-btn" data-mode="fill">Fill in the Blank (soon)</button>
+    </nav>
+
+    <!-- FLASHCARD PANEL -->
+    <section id="flashcard-panel" class="panel">
+      <div class="card" id="vocab-card">
+        <p class="label" id="word-label">Word</p>
+        <h2 id="word">loading…</h2>
+        <p class="pos" id="pos"></p>
+
+        <div class="hidden" id="definition-box">
+          <h3>Definition</h3>
+          <p id="definition"></p>
+          <h4>Example</h4>
+          <p id="example"></p>
+          <p class="meta" id="meta"></p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="show-btn">Show Definition</button>
+        <button id="next-btn">Next Word →</button>
+        <button id="shuffle-btn">🔀 Shuffle</button>
+      </div>
+
+      <p class="status" id="status">0 / 0 words loaded</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Academic Medic • SAT Vocab • v1</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
