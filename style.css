@@ -163,3 +163,45 @@ body {
   color: #94a3b8;
   font-size: 0.75rem;
 }
+
+.panel {
+  display: none;
+}
+
+.panel.visible {
+  display: block;
+}
+
+.mc-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1.1rem;
+}
+
+.mc-option-btn {
+  text-align: left;
+  background: #e5e7eb;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.mc-option-btn.correct {
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.6);
+}
+
+.mc-option-btn.incorrect {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.6);
+}
+
+.mc-feedback {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: #111827;
+}
+
