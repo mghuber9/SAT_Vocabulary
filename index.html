@@ -13,15 +13,15 @@
   </header>
 
   <main class="app">
-    <!-- MODE SWITCHER (for later) -->
+    <!-- MODE SWITCHER -->
     <nav class="modes">
       <button class="mode-btn active" data-mode="flashcard">Flashcards</button>
-      <button class="mode-btn" data-mode="multiple">Multiple Choice (soon)</button>
-      <button class="mode-btn" data-mode="fill">Fill in the Blank (soon)</button>
+      <button class="mode-btn" data-mode="multiple">Multiple Choice</button>
+      <button class="mode-btn" data-mode="fill" disabled>Fill in the Blank (coming)</button>
     </nav>
 
     <!-- FLASHCARD PANEL -->
-    <section id="flashcard-panel" class="panel">
+    <section id="flashcard-panel" class="panel visible">
       <div class="card" id="vocab-card">
         <p class="label" id="word-label">Word</p>
         <h2 id="word">loading…</h2>
@@ -44,10 +44,32 @@
 
       <p class="status" id="status">0 / 0 words loaded</p>
     </section>
+
+    <!-- MULTIPLE CHOICE PANEL -->
+    <section id="multiple-panel" class="panel">
+      <div class="card">
+        <p class="label">Choose the best definition for:</p>
+        <h2 id="mc-word">—</h2>
+        <p class="pos" id="mc-pos"></p>
+        <p class="meta" id="mc-meta"></p>
+
+        <div class="mc-options" id="mc-options">
+          <!-- buttons injected by JS -->
+        </div>
+
+        <p id="mc-feedback" class="mc-feedback"></p>
+
+        <div class="controls">
+          <button id="mc-next-btn">Next Question →</button>
+        </div>
+      </div>
+      <p class="status" id="mc-status">Question 1</p>
+    </section>
+
   </main>
 
   <footer class="footer">
-    <p>Academic Medic • SAT Vocab • v1</p>
+    <p>Academic Medic • SAT Vocab • v1.1 (with Multiple Choice)</p>
   </footer>
 
   <script src="script.js"></script>
