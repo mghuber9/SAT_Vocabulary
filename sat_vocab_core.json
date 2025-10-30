@@ -1,0 +1,1170 @@
+[
+  {
+    "word": "acerbic",
+    "pos": "adj.",
+    "definition": "sharp or biting in tone",
+    "example": "His acerbic remark quieted the room.",
+    "category": "tone",
+    "tags": ["negative", "critical"]
+  },
+  {
+    "word": "affable",
+    "pos": "adj.",
+    "definition": "friendly and easy to talk to",
+    "example": "The affable host made everyone comfortable.",
+    "category": "tone",
+    "tags": ["positive", "personality"]
+  },
+  {
+    "word": "alleviate",
+    "pos": "v.",
+    "definition": "to make less severe",
+    "example": "The new policy was meant to alleviate overcrowding.",
+    "category": "academic",
+    "tags": ["solution", "cause-effect"]
+  },
+  {
+    "word": "aloof",
+    "pos": "adj.",
+    "definition": "emotionally distant or reserved",
+    "example": "He appeared aloof during the discussion.",
+    "category": "tone",
+    "tags": ["neutral", "distant"]
+  },
+  {
+    "word": "ambiguous",
+    "pos": "adj.",
+    "definition": "unclear or open to more than one meaning",
+    "example": "The instructions were ambiguous, so students asked for help.",
+    "category": "academic",
+    "tags": ["clarity", "reading"]
+  },
+  {
+    "word": "ambivalent",
+    "pos": "adj.",
+    "definition": "having mixed or conflicting feelings",
+    "example": "She felt ambivalent about moving away for college.",
+    "category": "academic",
+    "tags": ["tone", "attitude"]
+  },
+  {
+    "word": "analyze",
+    "pos": "v.",
+    "definition": "to examine in detail for explanation",
+    "example": "Analyze how the author develops her argument.",
+    "category": "academic",
+    "tags": ["SAT-task", "reading"]
+  },
+  {
+    "word": "anomaly",
+    "pos": "n.",
+    "definition": "something that is unusual or unexpected",
+    "example": "One anomaly in the data challenged their conclusion.",
+    "category": "academic",
+    "tags": ["data", "science"]
+  },
+  {
+    "word": "antithesis",
+    "pos": "n.",
+    "definition": "the direct opposite of something",
+    "example": "His calmness was the antithesis of her anger.",
+    "category": "academic",
+    "tags": ["comparison", "rhetoric"]
+  },
+  {
+    "word": "apathetic",
+    "pos": "adj.",
+    "definition": "showing little or no interest",
+    "example": "Voters were apathetic about the local election.",
+    "category": "tone",
+    "tags": ["negative", "attitude"]
+  },
+  {
+    "word": "ardent",
+    "pos": "adj.",
+    "definition": "very enthusiastic or passionate",
+    "example": "She was an ardent supporter of school reform.",
+    "category": "tone",
+    "tags": ["positive", "intensity"]
+  },
+  {
+    "word": "assert",
+    "pos": "v.",
+    "definition": "to state confidently or forcefully",
+    "example": "The author asserts that community colleges deserve more funding.",
+    "category": "academic",
+    "tags": ["argument", "author-purpose"]
+  },
+  {
+    "word": "assess",
+    "pos": "v.",
+    "definition": "to evaluate or judge",
+    "example": "Assess the effectiveness of the policy described in the passage.",
+    "category": "academic",
+    "tags": ["SAT-task"]
+  },
+  {
+    "word": "augment",
+    "pos": "v.",
+    "definition": "to make larger or increase",
+    "example": "The scholarship augmented his savings for college.",
+    "category": "academic",
+    "tags": ["increase", "cause-effect"]
+  },
+  {
+    "word": "belligerent",
+    "pos": "adj.",
+    "definition": "hostile and aggressive",
+    "example": "His belligerent tone ended the conversation.",
+    "category": "tone",
+    "tags": ["negative", "conflict"]
+  },
+  {
+    "word": "benevolent",
+    "pos": "adj.",
+    "definition": "kind and generous",
+    "example": "A benevolent donor funded student laptops.",
+    "category": "tone",
+    "tags": ["positive", "character"]
+  },
+  {
+    "word": "bolster",
+    "pos": "v.",
+    "definition": "to support or strengthen",
+    "example": "Several studies bolster the author’s claim.",
+    "category": "academic",
+    "tags": ["evidence", "argument"]
+  },
+  {
+    "word": "candid",
+    "pos": "adj.",
+    "definition": "truthful and straightforward",
+    "example": "Her candid remarks helped improve the program.",
+    "category": "academic",
+    "tags": ["tone", "clarity"]
+  },
+  {
+    "word": "candor",
+    "pos": "n.",
+    "definition": "the quality of being open and honest",
+    "example": "He spoke with candor about the school’s challenges.",
+    "category": "academic",
+    "tags": ["tone", "honesty"]
+  },
+  {
+    "word": "callous",
+    "pos": "adj.",
+    "definition": "showing or having an insensitive disregard",
+    "example": "Her callous comment upset her classmates.",
+    "category": "tone",
+    "tags": ["negative", "insensitive"]
+  },
+  {
+    "word": "catalyst",
+    "pos": "n.",
+    "definition": "something that causes or speeds up change",
+    "example": "The speech was a catalyst for student activism.",
+    "category": "academic",
+    "tags": ["cause-effect"]
+  },
+  {
+    "word": "chronicle",
+    "pos": "v.",
+    "definition": "to record events in order",
+    "example": "His journal chronicles his first year of teaching.",
+    "category": "academic",
+    "tags": ["structure"]
+  },
+  {
+    "word": "cite",
+    "pos": "v.",
+    "definition": "to quote or refer to as evidence",
+    "example": "Cite evidence from the passage to support your answer.",
+    "category": "academic",
+    "tags": ["SAT-task", "evidence"]
+  },
+  {
+    "word": "coherent",
+    "pos": "adj.",
+    "definition": "logical and consistent",
+    "example": "Her presentation was coherent and persuasive.",
+    "category": "academic",
+    "tags": ["writing", "clarity"]
+  },
+  {
+    "word": "coincide",
+    "pos": "v.",
+    "definition": "to happen at the same time or align",
+    "example": "The protests coincided with the mayor’s visit.",
+    "category": "academic",
+    "tags": ["time", "cause-effect"]
+  },
+  {
+    "word": "commend",
+    "pos": "v.",
+    "definition": "to praise officially or formally",
+    "example": "The principal commended the students’ efforts.",
+    "category": "academic",
+    "tags": ["positive"]
+  },
+  {
+    "word": "comprehensive",
+    "pos": "adj.",
+    "definition": "complete and thorough",
+    "example": "She wrote a comprehensive summary of the article.",
+    "category": "academic",
+    "tags": ["reading", "summary"]
+  },
+  {
+    "word": "concede",
+    "pos": "v.",
+    "definition": "to admit as true or valid after first denying",
+    "example": "He conceded that the opposing view had some merit.",
+    "category": "academic",
+    "tags": ["argument", "counterclaim"]
+  },
+  {
+    "word": "concise",
+    "pos": "adj.",
+    "definition": "brief but including all important information",
+    "example": "Write a concise explanation of the author’s purpose.",
+    "category": "academic",
+    "tags": ["writing", "clarity"]
+  },
+  {
+    "word": "concur",
+    "pos": "v.",
+    "definition": "to agree",
+    "example": "Most researchers concur with this conclusion.",
+    "category": "academic",
+    "tags": ["agreement"]
+  },
+  {
+    "word": "condone",
+    "pos": "v.",
+    "definition": "to accept or allow (often something bad)",
+    "example": "The school cannot condone academic dishonesty.",
+    "category": "academic",
+    "tags": ["ethics"]
+  },
+  {
+    "word": "conform",
+    "pos": "v.",
+    "definition": "to follow rules or standards",
+    "example": "Students must conform to testing guidelines.",
+    "category": "academic",
+    "tags": ["rules"]
+  },
+  {
+    "word": "consequence",
+    "pos": "n.",
+    "definition": "a result or effect",
+    "example": "A likely consequence of pollution is habitat loss.",
+    "category": "academic",
+    "tags": ["cause-effect"]
+  },
+  {
+    "word": "contradict",
+    "pos": "v.",
+    "definition": "to state the opposite of",
+    "example": "The second paragraph contradicts the first.",
+    "category": "academic",
+    "tags": ["argument", "compare/contrast"]
+  },
+  {
+    "word": "convey",
+    "pos": "v.",
+    "definition": "to communicate or make known",
+    "example": "The author conveys admiration for the scientist.",
+    "category": "academic",
+    "tags": ["author-purpose", "tone"]
+  },
+  {
+    "word": "corroborate",
+    "pos": "v.",
+    "definition": "to confirm or support with evidence",
+    "example": "Two witnesses corroborated her account.",
+    "category": "academic",
+    "tags": ["evidence"]
+  },
+  {
+    "word": "criterion",
+    "pos": "n.",
+    "definition": "a standard by which something is judged",
+    "example": "Clarity is the main criterion for a good essay.",
+    "category": "academic",
+    "tags": ["evaluation"]
+  },
+  {
+    "word": "culminate",
+    "pos": "v.",
+    "definition": "to reach the highest point or final stage",
+    "example": "The project culminated in a public presentation.",
+    "category": "academic",
+    "tags": ["structure", "sequence"]
+  },
+  {
+    "word": "cynical",
+    "pos": "adj.",
+    "definition": "distrustful of others’ motives",
+    "example": "He was cynical about campaign promises.",
+    "category": "tone",
+    "tags": ["negative", "attitude"]
+  },
+  {
+    "word": "debunk",
+    "pos": "v.",
+    "definition": "to prove wrong or false",
+    "example": "Researchers debunked the popular myth.",
+    "category": "academic",
+    "tags": ["argument", "evidence"]
+  },
+  {
+    "word": "deduce",
+    "pos": "v.",
+    "definition": "to figure out by reasoning",
+    "example": "From the context, we can deduce the meaning.",
+    "category": "academic",
+    "tags": ["inference", "reading"]
+  },
+  {
+    "word": "deficit",
+    "pos": "n.",
+    "definition": "a shortage or lack",
+    "example": "The city faced a budget deficit this year.",
+    "category": "academic",
+    "tags": ["economics"]
+  },
+  {
+    "word": "deliberate",
+    "pos": "v.",
+    "definition": "to think or discuss carefully",
+    "example": "The committee deliberated before voting.",
+    "category": "academic",
+    "tags": ["process", "decision"]
+  },
+  {
+    "word": "delineate",
+    "pos": "v.",
+    "definition": "to describe or outline precisely",
+    "example": "The author delineates three major problems.",
+    "category": "academic",
+    "tags": ["structure", "clarity"]
+  },
+  {
+    "word": "denote",
+    "pos": "v.",
+    "definition": "to indicate or be a sign of",
+    "example": "A red mark usually denotes an error.",
+    "category": "academic",
+    "tags": ["vocab", "reading"]
+  },
+  {
+    "word": "derive",
+    "pos": "v.",
+    "definition": "to get or obtain from a source",
+    "example": "The word derives from Latin.",
+    "category": "academic",
+    "tags": ["etymology"]
+  },
+  {
+    "word": "detached",
+    "pos": "adj.",
+    "definition": "separate or emotionally uninvolved",
+    "example": "The historian takes a detached tone.",
+    "category": "tone",
+    "tags": ["neutral", "academic-tone"]
+  },
+  {
+    "word": "determine",
+    "pos": "v.",
+    "definition": "to decide or figure out",
+    "example": "Determine which choice best supports the claim.",
+    "category": "academic",
+    "tags": ["SAT-task"]
+  },
+  {
+    "word": "detract",
+    "pos": "v.",
+    "definition": "to take away from; reduce value",
+    "example": "The spelling errors detract from the argument.",
+    "category": "academic",
+    "tags": ["writing"]
+  },
+  {
+    "word": "deviate",
+    "pos": "v.",
+    "definition": "to move away from a plan or path",
+    "example": "He rarely deviates from the schedule.",
+    "category": "academic",
+    "tags": ["sequence"]
+  },
+  {
+    "word": "differentiate",
+    "pos": "v.",
+    "definition": "to show or find the difference",
+    "example": "Differentiate the author’s view from the critic’s.",
+    "category": "academic",
+    "tags": ["compare/contrast"]
+  },
+  {
+    "word": "diminish",
+    "pos": "v.",
+    "definition": "to make or become smaller",
+    "example": "His influence diminished over time.",
+    "category": "academic",
+    "tags": ["change-over-time"]
+  },
+  {
+    "word": "discern",
+    "pos": "v.",
+    "definition": "to recognize or identify",
+    "example": "Readers must discern the author’s attitude.",
+    "category": "academic",
+    "tags": ["tone", "inference"]
+  },
+  {
+    "word": "discrepancy",
+    "pos": "n.",
+    "definition": "a difference or inconsistency",
+    "example": "There was a discrepancy between the two reports.",
+    "category": "academic",
+    "tags": ["data", "comparison"]
+  },
+  {
+    "word": "disseminate",
+    "pos": "v.",
+    "definition": "to spread widely",
+    "example": "The organization disseminates health information.",
+    "category": "academic",
+    "tags": ["communication"]
+  },
+  {
+    "word": "distinguish",
+    "pos": "v.",
+    "definition": "to tell apart or recognize differences",
+    "example": "Distinguish central ideas from details.",
+    "category": "academic",
+    "tags": ["reading", "analysis"]
+  },
+  {
+    "word": "diverge",
+    "pos": "v.",
+    "definition": "to separate and go in different directions",
+    "example": "At this point, the two theories diverge.",
+    "category": "academic",
+    "tags": ["compare/contrast"]
+  },
+  {
+    "word": "earnest",
+    "pos": "adj.",
+    "definition": "serious and sincere",
+    "example": "Her earnest tone showed she cared.",
+    "category": "tone",
+    "tags": ["positive", "serious"]
+  },
+  {
+    "word": "elaborate",
+    "pos": "v.",
+    "definition": "to develop or explain in detail",
+    "example": "Please elaborate on your main point.",
+    "category": "academic",
+    "tags": ["writing"]
+  },
+  {
+    "word": "elicit",
+    "pos": "v.",
+    "definition": "to draw out a response",
+    "example": "The teacher’s question elicited thoughtful answers.",
+    "category": "academic",
+    "tags": ["communication"]
+  },
+  {
+    "word": "emphasize",
+    "pos": "v.",
+    "definition": "to give special importance to",
+    "example": "The author emphasizes the need for action.",
+    "category": "academic",
+    "tags": ["author-purpose"]
+  },
+  {
+    "word": "empathetic",
+    "pos": "adj.",
+    "definition": "showing understanding of others’ feelings",
+    "example": "Her empathetic words comforted the student.",
+    "category": "tone",
+    "tags": ["positive", "supportive"]
+  },
+  {
+    "word": "empirical",
+    "pos": "adj.",
+    "definition": "based on observation or experiment",
+    "example": "Empirical evidence supports the claim.",
+    "category": "academic",
+    "tags": ["science", "evidence"]
+  },
+  {
+    "word": "endorse",
+    "pos": "v.",
+    "definition": "to approve or support publicly",
+    "example": "Several scientists endorsed the new policy.",
+    "category": "academic",
+    "tags": ["support"]
+  },
+  {
+    "word": "enumerate",
+    "pos": "v.",
+    "definition": "to mention one by one; to list",
+    "example": "The author enumerates three drawbacks.",
+    "category": "academic",
+    "tags": ["structure", "organization"]
+  },
+  {
+    "word": "equivocal",
+    "pos": "adj.",
+    "definition": "uncertain or having more than one meaning",
+    "example": "His equivocal answer confused the audience.",
+    "category": "academic",
+    "tags": ["clarity"]
+  },
+  {
+    "word": "erratic",
+    "pos": "adj.",
+    "definition": "not regular or consistent",
+    "example": "Attendance was erratic during the winter.",
+    "category": "academic",
+    "tags": ["pattern"]
+  },
+  {
+    "word": "evaluate",
+    "pos": "v.",
+    "definition": "to judge the value or quality of",
+    "example": "Evaluate how the author uses evidence.",
+    "category": "academic",
+    "tags": ["SAT-task", "analysis"]
+  },
+  {
+    "word": "exemplify",
+    "pos": "v.",
+    "definition": "to serve as a good example of",
+    "example": "Her project exemplifies creative thinking.",
+    "category": "academic",
+    "tags": ["illustration"]
+  },
+  {
+    "word": "explicit",
+    "pos": "adj.",
+    "definition": "stated clearly and in detail",
+    "example": "The directions were explicit and easy to follow.",
+    "category": "academic",
+    "tags": ["clarity", "reading"]
+  },
+  {
+    "word": "facetious",
+    "pos": "adj.",
+    "definition": "treating serious issues with inappropriate humor",
+    "example": "His facetious comment broke the tension.",
+    "category": "tone",
+    "tags": ["humor"]
+  },
+  {
+    "word": "facilitate",
+    "pos": "v.",
+    "definition": "to make an action or process easier",
+    "example": "Online tools facilitate group work.",
+    "category": "academic",
+    "tags": ["process"]
+  },
+  {
+    "word": "feasible",
+    "pos": "adj.",
+    "definition": "possible and practical",
+    "example": "Is this plan feasible with our budget?",
+    "category": "academic",
+    "tags": ["solution"]
+  },
+  {
+    "word": "fervent",
+    "pos": "adj.",
+    "definition": "having or showing great passion",
+    "example": "She made a fervent appeal for help.",
+    "category": "tone",
+    "tags": ["intensity", "positive"]
+  },
+  {
+    "word": "flippant",
+    "pos": "adj.",
+    "definition": "not showing a serious or respectful attitude",
+    "example": "His flippant tone angered the audience.",
+    "category": "tone",
+    "tags": ["negative"]
+  },
+  {
+    "word": "fluctuate",
+    "pos": "v.",
+    "definition": "to rise and fall irregularly",
+    "example": "Gas prices fluctuate throughout the year.",
+    "category": "academic",
+    "tags": ["data", "change"]
+  },
+  {
+    "word": "formulate",
+    "pos": "v.",
+    "definition": "to create or develop methodically",
+    "example": "Formulate a clear thesis statement.",
+    "category": "academic",
+    "tags": ["writing"]
+  },
+  {
+    "word": "fundamental",
+    "pos": "adj.",
+    "definition": "basic and essential",
+    "example": "Respect is fundamental to a strong community.",
+    "category": "academic",
+    "tags": ["core"]
+  },
+  {
+    "word": "grave",
+    "pos": "adj.",
+    "definition": "serious or solemn",
+    "example": "The speaker addressed the issue in a grave tone.",
+    "category": "tone",
+    "tags": ["serious"]
+  },
+  {
+    "word": "haughty",
+    "pos": "adj.",
+    "definition": "arrogantly superior",
+    "example": "Her haughty attitude discouraged questions.",
+    "category": "tone",
+    "tags": ["negative", "arrogant"]
+  },
+  {
+    "word": "hypothesis",
+    "pos": "n.",
+    "definition": "a proposed explanation based on limited evidence",
+    "example": "The experiment was designed to test the hypothesis.",
+    "category": "academic",
+    "tags": ["science"]
+  },
+  {
+    "word": "illustrate",
+    "pos": "v.",
+    "definition": "to explain or make clear with examples",
+    "example": "The chart illustrates the trend over time.",
+    "category": "academic",
+    "tags": ["support"]
+  },
+  {
+    "word": "impartial",
+    "pos": "adj.",
+    "definition": "fair and not biased",
+    "example": "A good judge must remain impartial.",
+    "category": "tone",
+    "tags": ["neutral", "fairness"]
+  },
+  {
+    "word": "imply",
+    "pos": "v.",
+    "definition": "to suggest without stating directly",
+    "example": "The author implies that the plan is too costly.",
+    "category": "academic",
+    "tags": ["inference", "author-purpose"]
+  },
+  {
+    "word": "inadvertent",
+    "pos": "adj.",
+    "definition": "unintentional or accidental",
+    "example": "An inadvertent error changed the results.",
+    "category": "academic",
+    "tags": ["mistake"]
+  },
+  {
+    "word": "inherent",
+    "pos": "adj.",
+    "definition": "existing as a natural or essential part",
+    "example": "There are inherent risks in investing.",
+    "category": "academic",
+    "tags": ["description"]
+  },
+  {
+    "word": "innovate",
+    "pos": "v.",
+    "definition": "to introduce new ideas or methods",
+    "example": "The company must innovate to stay competitive.",
+    "category": "academic",
+    "tags": ["change"]
+  },
+  {
+    "word": "interpret",
+    "pos": "v.",
+    "definition": "to explain the meaning of",
+    "example": "Interpret the author’s choice of imagery.",
+    "category": "academic",
+    "tags": ["reading"]
+  },
+  {
+    "word": "integrate",
+    "pos": "v.",
+    "definition": "to combine parts into a whole",
+    "example": "Integrate information from both passages.",
+    "category": "academic",
+    "tags": ["synthesis"]
+  },
+  {
+    "word": "inundate",
+    "pos": "v.",
+    "definition": "to overwhelm or flood",
+    "example": "He was inundated with messages after the post.",
+    "category": "academic",
+    "tags": ["intensity"]
+  },
+  {
+    "word": "ironic",
+    "pos": "adj.",
+    "definition": "happening the opposite of what is expected",
+    "example": "It’s ironic that the tutor failed the test.",
+    "category": "tone",
+    "tags": ["contrast"]
+  },
+  {
+    "word": "juxtapose",
+    "pos": "v.",
+    "definition": "to place side by side for comparison",
+    "example": "The author juxtaposes rural and urban life.",
+    "category": "academic",
+    "tags": ["compare/contrast"]
+  },
+  {
+    "word": "jovial",
+    "pos": "adj.",
+    "definition": "cheerful and friendly",
+    "example": "Her jovial tone made the reading enjoyable.",
+    "category": "tone",
+    "tags": ["positive"]
+  },
+  {
+    "word": "legitimate",
+    "pos": "adj.",
+    "definition": "lawful, reasonable, or justified",
+    "example": "The students raised legitimate concerns.",
+    "category": "academic",
+    "tags": ["validity"]
+  },
+  {
+    "word": "lucid",
+    "pos": "adj.",
+    "definition": "clear and easy to understand",
+    "example": "The coach offered a lucid explanation.",
+    "category": "academic",
+    "tags": ["clarity"]
+  },
+  {
+    "word": "melancholy",
+    "pos": "adj.",
+    "definition": "sad or pensive",
+    "example": "The passage ends on a melancholy note.",
+    "category": "tone",
+    "tags": ["sad", "emotional"]
+  },
+  {
+    "word": "mediate",
+    "pos": "v.",
+    "definition": "to act as a go-between to resolve",
+    "example": "She mediated the disagreement between groups.",
+    "category": "academic",
+    "tags": ["conflict"]
+  },
+  {
+    "word": "mitigate",
+    "pos": "v.",
+    "definition": "to make less severe",
+    "example": "These measures mitigate climate impacts.",
+    "category": "academic",
+    "tags": ["solution"]
+  },
+  {
+    "word": "morose",
+    "pos": "adj.",
+    "definition": "gloomy or sullen",
+    "example": "After the loss, he became morose.",
+    "category": "tone",
+    "tags": ["negative"]
+  },
+  {
+    "word": "nonchalant",
+    "pos": "adj.",
+    "definition": "calm and seeming not to care",
+    "example": "He gave a nonchalant shrug.",
+    "category": "tone",
+    "tags": ["casual"]
+  },
+  {
+    "word": "nostalgic",
+    "pos": "adj.",
+    "definition": "longing for the past",
+    "example": "The author is nostalgic about childhood summers.",
+    "category": "tone",
+    "tags": ["emotional", "past"]
+  },
+  {
+    "word": "novel",
+    "pos": "adj.",
+    "definition": "new or unusual",
+    "example": "A novel solution improved attendance.",
+    "category": "academic",
+    "tags": ["innovation"]
+  },
+  {
+    "word": "objective",
+    "pos": "adj.",
+    "definition": "based on facts, not feelings",
+    "example": "Keep an objective tone in academic writing.",
+    "category": "academic",
+    "tags": ["tone", "academic"]
+  },
+  {
+    "word": "obscure",
+    "pos": "v.",
+    "definition": "to make unclear or hidden",
+    "example": "The fog obscured the buildings.",
+    "category": "academic",
+    "tags": ["clarity"]
+  },
+  {
+    "word": "omission",
+    "pos": "n.",
+    "definition": "something that has been left out",
+    "example": "The omission of data weakened her report.",
+    "category": "academic",
+    "tags": ["structure"]
+  },
+  {
+    "word": "optimistic",
+    "pos": "adj.",
+    "definition": "hopeful about the future",
+    "example": "The author is optimistic about new technology.",
+    "category": "tone",
+    "tags": ["positive"]
+  },
+  {
+    "word": "paradox",
+    "pos": "n.",
+    "definition": "a statement that seems contradictory but may be true",
+    "example": "It’s a paradox that he is lonely in a crowd.",
+    "category": "academic",
+    "tags": ["logic"]
+  },
+  {
+    "word": "patronizing",
+    "pos": "adj.",
+    "definition": "treating someone as inferior",
+    "example": "Her patronizing tone angered the audience.",
+    "category": "tone",
+    "tags": ["negative", "condescending"]
+  },
+  {
+    "word": "pensive",
+    "pos": "adj.",
+    "definition": "deeply thoughtful",
+    "example": "He sat in a pensive mood by the window.",
+    "category": "tone",
+    "tags": ["thoughtful"]
+  },
+  {
+    "word": "pertinent",
+    "pos": "adj.",
+    "definition": "relevant and appropriate",
+    "example": "Use only pertinent details in your summary.",
+    "category": "academic",
+    "tags": ["relevance"]
+  },
+  {
+    "word": "pessimistic",
+    "pos": "adj.",
+    "definition": "expecting the worst",
+    "example": "The writer sounds pessimistic about reform.",
+    "category": "tone",
+    "tags": ["negative"]
+  },
+  {
+    "word": "plausible",
+    "pos": "adj.",
+    "definition": "seemingly true or reasonable",
+    "example": "Her explanation is plausible given the evidence.",
+    "category": "academic",
+    "tags": ["inference"]
+  },
+  {
+    "word": "poignant",
+    "pos": "adj.",
+    "definition": "emotionally moving",
+    "example": "The author ends with a poignant anecdote.",
+    "category": "tone",
+    "tags": ["emotional"]
+  },
+  {
+    "word": "pragmatic",
+    "pos": "adj.",
+    "definition": "practical rather than idealistic",
+    "example": "She took a pragmatic approach to the problem.",
+    "category": "tone",
+    "tags": ["practical"]
+  },
+  {
+    "word": "precise",
+    "pos": "adj.",
+    "definition": "exact and accurate",
+    "example": "Choose the most precise word for the context.",
+    "category": "academic",
+    "tags": ["word-choice"]
+  },
+  {
+    "word": "proponent",
+    "pos": "n.",
+    "definition": "a person who supports something",
+    "example": "She is a proponent of renewable energy.",
+    "category": "academic",
+    "tags": ["support"]
+  },
+  {
+    "word": "qualify",
+    "pos": "v.",
+    "definition": "to limit, modify, or restrict a statement",
+    "example": "The author qualifies his claim in line 20.",
+    "category": "academic",
+    "tags": ["argument", "nuance"]
+  },
+  {
+    "word": "quantitative",
+    "pos": "adj.",
+    "definition": "relating to numbers or amounts",
+    "example": "Quantitative data supports the conclusion.",
+    "category": "academic",
+    "tags": ["data"]
+  },
+  {
+    "word": "reiterate",
+    "pos": "v.",
+    "definition": "to say again for emphasis",
+    "example": "The author reiterates her main point in the final paragraph.",
+    "category": "academic",
+    "tags": ["structure"]
+  },
+  {
+    "word": "relevant",
+    "pos": "adj.",
+    "definition": "closely connected to the topic",
+    "example": "Include only relevant evidence in your essay.",
+    "category": "academic",
+    "tags": ["relevance"]
+  },
+  {
+    "word": "reliable",
+    "pos": "adj.",
+    "definition": "trusted or dependable",
+    "example": "Use reliable sources in your research.",
+    "category": "academic",
+    "tags": ["research"]
+  },
+  {
+    "word": "resolve",
+    "pos": "v.",
+    "definition": "to find a solution or settle",
+    "example": "The leaders resolved the conflict.",
+    "category": "academic",
+    "tags": ["solution"]
+  },
+  {
+    "word": "reverent",
+    "pos": "adj.",
+    "definition": "feeling or showing deep respect",
+    "example": "The audience fell silent in reverent attention.",
+    "category": "tone",
+    "tags": ["positive", "respect"]
+  },
+  {
+    "word": "rhetorical",
+    "pos": "adj.",
+    "definition": "related to effective speaking/writing; asked for effect",
+    "example": "He asks a rhetorical question to engage readers.",
+    "category": "tone",
+    "tags": ["argument"]
+  },
+  {
+    "word": "refute",
+    "pos": "v.",
+    "definition": "to prove wrong",
+    "example": "The author refutes the opposing view in paragraph 3.",
+    "category": "academic",
+    "tags": ["argument", "counterclaim"]
+  },
+  {
+    "word": "resolve",
+    "pos": "v.",
+    "definition": "to decide firmly or settle",
+    "example": "She resolved to improve her study habits.",
+    "category": "academic",
+    "tags": ["decision"]
+  },
+  {
+    "word": "sardonic",
+    "pos": "adj.",
+    "definition": "mocking or scornful",
+    "example": "The critic’s sardonic tone was unmistakable.",
+    "category": "tone",
+    "tags": ["negative", "sarcasm"]
+  },
+  {
+    "word": "scrutinize",
+    "pos": "v.",
+    "definition": "to examine closely",
+    "example": "Scrutinize the data before drawing conclusions.",
+    "category": "academic",
+    "tags": ["analysis"]
+  },
+  {
+    "word": "sentimental",
+    "pos": "adj.",
+    "definition": "showing or influenced by emotion",
+    "example": "He kept the letter for sentimental reasons.",
+    "category": "tone",
+    "tags": ["emotional"]
+  },
+  {
+    "word": "significant",
+    "pos": "adj.",
+    "definition": "important or meaningful",
+    "example": "The study made a significant contribution.",
+    "category": "academic",
+    "tags": ["importance"]
+  },
+  {
+    "word": "skeptical",
+    "pos": "adj.",
+    "definition": "doubting or questioning",
+    "example": "The author is skeptical of the new policy.",
+    "category": "tone",
+    "tags": ["critical"]
+  },
+  {
+    "word": "somber",
+    "pos": "adj.",
+    "definition": "serious, dark, or gloomy",
+    "example": "The article ends on a somber note.",
+    "category": "tone",
+    "tags": ["serious"]
+  },
+  {
+    "word": "speculate",
+    "pos": "v.",
+    "definition": "to guess based on limited evidence",
+    "example": "Historians can only speculate about his motives.",
+    "category": "academic",
+    "tags": ["inference"]
+  },
+  {
+    "word": "substantiate",
+    "pos": "v.",
+    "definition": "to support with evidence",
+    "example": "Substantiate your answer with details from the text.",
+    "category": "academic",
+    "tags": ["evidence"]
+  },
+  {
+    "word": "sympathetic",
+    "pos": "adj.",
+    "definition": "showing understanding and care",
+    "example": "Her sympathetic tone comforted readers.",
+    "category": "tone",
+    "tags": ["positive"]
+  },
+  {
+    "word": "synthesize",
+    "pos": "v.",
+    "definition": "to combine parts into a whole",
+    "example": "Synthesize information from both passages.",
+    "category": "academic",
+    "tags": ["synthesis"]
+  },
+  {
+    "word": "tangible",
+    "pos": "adj.",
+    "definition": "real and able to be touched or clearly seen",
+    "example": "The program showed tangible results.",
+    "category": "academic",
+    "tags": ["evidence"]
+  },
+  {
+    "word": "tentative",
+    "pos": "adj.",
+    "definition": "not certain or fixed",
+    "example": "He offered a tentative conclusion.",
+    "category": "tone",
+    "tags": ["uncertain"]
+  },
+  {
+    "word": "thesis",
+    "pos": "n.",
+    "definition": "the main idea or claim of a text",
+    "example": "State your thesis in the first paragraph.",
+    "category": "academic",
+    "tags": ["writing"]
+  },
+  {
+    "word": "transition",
+    "pos": "n.",
+    "definition": "a word or phrase that connects ideas",
+    "example": "Use transitions to improve your essay’s flow.",
+    "category": "academic",
+    "tags": ["writing", "cohesion"]
+  },
+  {
+    "word": "undermine",
+    "pos": "v.",
+    "definition": "to weaken or damage",
+    "example": "Frequent interruptions can undermine a speaker’s message.",
+    "category": "academic",
+    "tags": ["argument"]
+  },
+  {
+    "word": "validate",
+    "pos": "v.",
+    "definition": "to confirm or support",
+    "example": "Results from a second trial validated the findings.",
+    "category": "academic",
+    "tags": ["evidence"]
+  },
+  {
+    "word": "vindictive",
+    "pos": "adj.",
+    "definition": "having a strong desire for revenge",
+    "example": "Her vindictive response surprised the group.",
+    "category": "tone",
+    "tags": ["negative"]
+  },
+  {
+    "word": "wistful",
+    "pos": "adj.",
+    "definition": "having a feeling of vague or regretful longing",
+    "example": "He cast a wistful glance at the old playground.",
+    "category": "tone",
+    "tags": ["emotional", "past"]
+  },
+  {
+    "word": "wry",
+    "pos": "adj.",
+    "definition": "dryly humorous, often with irony",
+    "example": "He offered a wry comment about the situation.",
+    "category": "tone",
+    "tags": ["humor", "irony"]
+  },
+  {
+    "word": "zealous",
+    "pos": "adj.",
+    "definition": "very eager or devoted",
+    "example": "Zealous volunteers helped organize the event.",
+    "category": "tone",
+    "tags": ["intensity", "positive"]
+  }
+]
