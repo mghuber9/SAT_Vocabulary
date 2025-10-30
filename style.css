@@ -204,4 +204,25 @@ body {
   font-size: 0.85rem;
   color: #111827;
 }
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #fff;
+  border-radius: 9999px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  color: #111827;
+}
+
+.filter-btn.active {
+  background: #111827;
+  color: #fff;
+}
 
