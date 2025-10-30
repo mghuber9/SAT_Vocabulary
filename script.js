@@ -1,6 +1,7 @@
-// script.js — Academic Medic SAT Vocab
+// script.js — Academic Medic SAT Vocab (v1.2)
+// features: flashcards, multiple choice, filters
 
-// Fallback data
+// 1. fallback data (in case JSON doesn't load)
 const fallbackVocab = [
   {
     word: "advocate",
@@ -36,7 +37,11 @@ const fallbackVocab = [
   }
 ];
 
+// master list (full 150)
 let vocab = [];
+// current working list after filters
+let currentList = [];
+// index for flashcard mode
 let currentIndex = 0;
 
 // FLASHCARD ELEMENTS
@@ -47,6 +52,7 @@ const defEl = document.getElementById("definition");
 const exEl = document.getElementById("example");
 const metaEl = document.getElementById("meta");
 const statusEl = document.getElementById("status");
+
 const showBtn = document.getElementById("show-btn");
 const nextBtn = document.getElementById("next-btn");
 const shuffleBtn = document.getElementById("shuffle-btn");
@@ -65,6 +71,24 @@ const modeButtons = document.querySelectorAll(".mode-btn");
 const flashcardPanel = document.getElementById("flashcard-panel");
 const multiplePanel = document.getElementById("multiple-panel");
 
+// FILTERS
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+// helper: random int
+function rand(max) {
+  return Math.floor(Math.random() * max);
+}
+
+// shuffle array in place
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// ===== MODE HANDLING =====
 function setMode(mode) {
   // toggle active button
   modeButtons.forEach((btn) => {
@@ -78,53 +102,64 @@ function setMode(mode) {
   } else if (mode === "multiple") {
     multiplePanel.classList.add("visible");
     flashcardPanel.classList.remove("visible");
-    // when entering MC mode, generate a question
+    // build MC from current filter
     buildMultipleChoiceQuestion();
   }
 }
 
-// helper: random int
-function rand(max) {
-  return Math.floor(Math.random() * max);
-}
-
-// FLASHCARD: display a word
+// ===== FLASHCARD DISPLAY =====
 function showWord(index) {
-  if (!vocab.length) return;
-  const item = vocab[index];
+  if (!currentList.length) return;
+  const item = currentList[index];
 
   wordEl.textContent = item.word;
   posEl.textContent = item.pos || "";
   defEl.textContent = item.definition || "";
   exEl.textContent = item.example || "—";
   metaEl.textContent = item.category
-    ? `Category: ${item.category} ${item.tags ? "• " + item.tags.join(", ") : ""}`
+    ? `Category: ${item.category}${item.tags ? " • " + item.tags.join(", ") : ""}`
     : "";
 
   // hide definition until user clicks "Show"
   defBox.classList.add("hidden");
 
-  statusEl.textContent = `${index + 1} / ${vocab.length} words`;
+  statusEl.textContent = `${index + 1} / ${currentList.length} words`;
 }
 
-// shuffle array in place
-function shuffleArray(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
+// ===== FILTER HANDLING =====
+function applyFilter(filterName) {
+  if (filterName === "all") {
+    currentList = [...vocab];
+  } else if (filterName === "academic") {
+    currentList = vocab.filter((w) => w.category === "academic");
+  } else if (filterName === "tone") {
+    currentList = vocab.filter((w) => w.category === "tone");
+  } else if (filterName === "random10") {
+    const temp = [...vocab];
+    shuffleArray(temp);
+    currentList = temp.slice(0, 10);
+  } else {
+    // fallback
+    currentList = [...vocab];
   }
-  return arr;
+
+  currentIndex = 0;
+  showWord(0);
+  // refresh MC too so both modes use same pool
+  buildMultipleChoiceQuestion();
 }
 
-// MULTIPLE CHOICE: build question
+// ===== MULTIPLE CHOICE =====
 function buildMultipleChoiceQuestion() {
-  if (!vocab.length) return;
+  // use current filter pool if big enough, else full vocab
+  const source = currentList.length >= 4 ? currentList : vocab;
+  if (!source.length) return;
 
   mcFeedbackEl.textContent = "";
 
-  // 1. choose a correct word
-  const correctIndex = rand(vocab.length);
-  const correctItem = vocab[correctIndex];
+  // pick correct
+  const correctIndex = rand(source.length);
+  const correctItem = source[correctIndex];
 
   mcWordEl.textContent = correctItem.word;
   mcPosEl.textContent = correctItem.pos || "";
@@ -132,31 +167,37 @@ function buildMultipleChoiceQuestion() {
     ? `Category: ${correctItem.category}`
     : "";
 
-  // 2. choose 3 distractors (different words)
-  const distractors = [];
-  // make a pool of indexes except correct
-  const pool = vocab.map((_, i) => i).filter((i) => i !== correctIndex);
+  // pick distractors from same pool
+  const pool = source
+    .map((_, i) => i)
+    .filter((i) => i !== correctIndex);
   shuffleArray(pool);
+
+  const distractors = [];
   for (let i = 0; i < 3 && i < pool.length; i++) {
-    distractors.push(vocab[pool[i]]);
+    distractors.push(source[pool[i]]);
   }
 
-  // 3. make options array
+  // if still not enough distractors (because we filtered to a tiny list),
+  // top up from full vocab
+  while (distractors.length < 3 && vocab.length > 3) {
+    const extra = vocab[rand(vocab.length)];
+    const alreadyUsed =
+      extra.word === correctItem.word ||
+      distractors.find((d) => d.word === extra.word);
+    if (!alreadyUsed) distractors.push(extra);
+  }
+
   const options = [
-    {
-      text: correctItem.definition,
-      correct: true
-    },
-    ...distractors.map((item) => ({
-      text: item.definition,
+    { text: correctItem.definition, correct: true },
+    ...distractors.map((d) => ({
+      text: d.definition,
       correct: false
     }))
   ];
 
-  // 4. shuffle options
   shuffleArray(options);
 
-  // 5. render buttons
   mcOptionsEl.innerHTML = "";
   options.forEach((opt) => {
     const btn = document.createElement("button");
@@ -173,7 +214,6 @@ function buildMultipleChoiceQuestion() {
       } else {
         btn.classList.add("incorrect");
         mcFeedbackEl.textContent = `❌ Not quite. The correct definition is: "${correctItem.definition}"`;
-        // highlight correct one
         allBtns.forEach((b) => {
           if (b.textContent === correctItem.definition) {
             b.classList.add("correct");
@@ -184,24 +224,25 @@ function buildMultipleChoiceQuestion() {
     mcOptionsEl.appendChild(btn);
   });
 
-  // update status (optional: track question count)
-  mcStatusEl.textContent = `Question: ${Math.floor(Math.random() * 9000)}`;
+  mcStatusEl.textContent = `Pool: ${source.length} words`;
 }
 
-// EVENT LISTENERS
+// ===== EVENT LISTENERS =====
+
+// flashcard buttons
 showBtn.addEventListener("click", () => {
   defBox.classList.remove("hidden");
 });
 
 nextBtn.addEventListener("click", () => {
-  if (!vocab.length) return;
-  currentIndex = (currentIndex + 1) % vocab.length;
+  if (!currentList.length) return;
+  currentIndex = (currentIndex + 1) % currentList.length;
   showWord(currentIndex);
 });
 
 shuffleBtn.addEventListener("click", () => {
-  if (!vocab.length) return;
-  shuffleArray(vocab);
+  if (!currentList.length) return;
+  shuffleArray(currentList);
   currentIndex = 0;
   showWord(currentIndex);
 });
@@ -209,9 +250,19 @@ shuffleBtn.addEventListener("click", () => {
 // mode buttons
 modeButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    const mode = btn.dataset.mode;
     if (btn.disabled) return;
+    const mode = btn.dataset.mode;
     setMode(mode);
+  });
+});
+
+// filter buttons
+filterButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    filterButtons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    const filter = btn.dataset.filter;
+    applyFilter(filter);
   });
 });
 
@@ -220,12 +271,10 @@ mcNextBtn.addEventListener("click", () => {
   buildMultipleChoiceQuestion();
 });
 
-// 3. load the real JSON
+// ===== LOAD DATA =====
 fetch("sat_vocab_core.json")
   .then((res) => {
-    if (!res.ok) {
-      throw new Error("Network response was not ok");
-    }
+    if (!res.ok) throw new Error("Network error");
     return res.json();
   })
   .then((data) => {
@@ -233,19 +282,18 @@ fetch("sat_vocab_core.json")
     if (!vocab.length) {
       vocab = fallbackVocab;
     }
-
     // sort alphabetically
     vocab.sort((a, b) => a.word.localeCompare(b.word));
 
-    // show first word in flashcard mode
+    // default filter = all
+    currentList = [...vocab];
     showWord(0);
-
-    // also prep the first MC question (in case they switch right away)
     buildMultipleChoiceQuestion();
   })
   .catch((err) => {
     console.warn("Could not load sat_vocab_core.json, using fallback.", err);
     vocab = fallbackVocab;
+    currentList = [...fallbackVocab];
     showWord(0);
     buildMultipleChoiceQuestion();
   });
