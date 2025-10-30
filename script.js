@@ -1,7 +1,7 @@
-// script.js — Academic Medic SAT Vocab (v1.2)
-// features: flashcards, multiple choice, filters
+// script.js — Academic Medic SAT Vocab (v1.3)
+// features: flashcards, multiple choice, filters, units
 
-// 1. fallback data (in case JSON doesn't load)
+// fallback if JSON fails
 const fallbackVocab = [
   {
     word: "advocate",
@@ -39,10 +39,12 @@ const fallbackVocab = [
 
 // master list (full 150)
 let vocab = [];
-// current working list after filters
+// current working list after filters/units
 let currentList = [];
 // index for flashcard mode
 let currentIndex = 0;
+// track if we are currently in "unit mode"
+let activeUnit = null;
 
 // FLASHCARD ELEMENTS
 const wordEl = document.getElementById("word");
@@ -74,6 +76,9 @@ const multiplePanel = document.getElementById("multiple-panel");
 // FILTERS
 const filterButtons = document.querySelectorAll(".filter-btn");
 
+// UNITS
+const unitButtons = document.querySelectorAll(".unit-btn");
+
 // helper: random int
 function rand(max) {
   return Math.floor(Math.random() * max);
@@ -90,19 +95,16 @@ function shuffleArray(arr) {
 
 // ===== MODE HANDLING =====
 function setMode(mode) {
-  // toggle active button
   modeButtons.forEach((btn) => {
     btn.classList.toggle("active", btn.dataset.mode === mode);
   });
 
-  // toggle panels
   if (mode === "flashcard") {
     flashcardPanel.classList.add("visible");
     multiplePanel.classList.remove("visible");
   } else if (mode === "multiple") {
     multiplePanel.classList.add("visible");
     flashcardPanel.classList.remove("visible");
-    // build MC from current filter
     buildMultipleChoiceQuestion();
   }
 }
@@ -120,14 +122,19 @@ function showWord(index) {
     ? `Category: ${item.category}${item.tags ? " • " + item.tags.join(", ") : ""}`
     : "";
 
-  // hide definition until user clicks "Show"
   defBox.classList.add("hidden");
 
-  statusEl.textContent = `${index + 1} / ${currentList.length} words`;
+  statusEl.textContent = `${index + 1} / ${currentList.length} words${
+    activeUnit ? " • Unit " + activeUnit : ""
+  }`;
 }
 
 // ===== FILTER HANDLING =====
 function applyFilter(filterName) {
+  // if we click a filter, we are leaving unit mode
+  activeUnit = null;
+  unitButtons.forEach((b) => b.classList.remove("active"));
+
   if (filterName === "all") {
     currentList = [...vocab];
   } else if (filterName === "academic") {
@@ -139,20 +146,36 @@ function applyFilter(filterName) {
     shuffleArray(temp);
     currentList = temp.slice(0, 10);
   } else {
-    // fallback
     currentList = [...vocab];
   }
 
   currentIndex = 0;
   showWord(0);
-  // refresh MC too so both modes use same pool
   buildMultipleChoiceQuestion();
+}
+
+// ===== UNIT HANDLING =====
+// we will split vocab into 6 roughly equal chunks AFTER it is loaded
+function getUnitList(unitNumber) {
+  if (!vocab.length) return [];
+  const total = vocab.length;
+  const units = 6;
+  const size = Math.ceil(total / units); // ~25 for 150
+
+  const start = (unitNumber - 1) * size;
+  const end = start + size;
+  return vocab.slice(start, end);
 }
 
 // ===== MULTIPLE CHOICE =====
 function buildMultipleChoiceQuestion() {
-  // use current filter pool if big enough, else full vocab
-  const source = currentList.length >= 4 ? currentList : vocab;
+  const source =
+    currentList.length >= 4
+      ? currentList
+      : vocab.length >= 4
+      ? vocab
+      : fallbackVocab;
+
   if (!source.length) return;
 
   mcFeedbackEl.textContent = "";
@@ -167,7 +190,7 @@ function buildMultipleChoiceQuestion() {
     ? `Category: ${correctItem.category}`
     : "";
 
-  // pick distractors from same pool
+  // pick distractors
   const pool = source
     .map((_, i) => i)
     .filter((i) => i !== correctIndex);
@@ -178,22 +201,18 @@ function buildMultipleChoiceQuestion() {
     distractors.push(source[pool[i]]);
   }
 
-  // if still not enough distractors (because we filtered to a tiny list),
-  // top up from full vocab
+  // top up from full list if needed
   while (distractors.length < 3 && vocab.length > 3) {
     const extra = vocab[rand(vocab.length)];
-    const alreadyUsed =
+    const exists =
       extra.word === correctItem.word ||
       distractors.find((d) => d.word === extra.word);
-    if (!alreadyUsed) distractors.push(extra);
+    if (!exists) distractors.push(extra);
   }
 
   const options = [
     { text: correctItem.definition, correct: true },
-    ...distractors.map((d) => ({
-      text: d.definition,
-      correct: false
-    }))
+    ...distractors.map((d) => ({ text: d.definition, correct: false }))
   ];
 
   shuffleArray(options);
@@ -204,7 +223,6 @@ function buildMultipleChoiceQuestion() {
     btn.className = "mc-option-btn";
     btn.textContent = opt.text;
     btn.addEventListener("click", () => {
-      // lock all
       const allBtns = mcOptionsEl.querySelectorAll("button");
       allBtns.forEach((b) => (b.disabled = true));
 
@@ -224,7 +242,9 @@ function buildMultipleChoiceQuestion() {
     mcOptionsEl.appendChild(btn);
   });
 
-  mcStatusEl.textContent = `Pool: ${source.length} words`;
+  mcStatusEl.textContent = `Pool: ${source.length} words${
+    activeUnit ? " • Unit " + activeUnit : ""
+  }`;
 }
 
 // ===== EVENT LISTENERS =====
@@ -251,8 +271,7 @@ shuffleBtn.addEventListener("click", () => {
 modeButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     if (btn.disabled) return;
-    const mode = btn.dataset.mode;
-    setMode(mode);
+    setMode(btn.dataset.mode);
   });
 });
 
@@ -261,8 +280,36 @@ filterButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     filterButtons.forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
-    const filter = btn.dataset.filter;
-    applyFilter(filter);
+    applyFilter(btn.dataset.filter);
+  });
+});
+
+// unit buttons
+unitButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const unit = btn.dataset.unit;
+    // clear active on all
+    unitButtons.forEach((b) => b.classList.remove("active"));
+    if (unit === "all") {
+      // go back to whatever filter is active
+      activeUnit = null;
+      // also highlight current filter again
+      const activeFilter = document.querySelector(".filter-btn.active");
+      if (activeFilter) {
+        applyFilter(activeFilter.dataset.filter);
+      } else {
+        applyFilter("all");
+      }
+      return;
+    }
+
+    // set this unit active
+    btn.classList.add("active");
+    activeUnit = Number(unit);
+    currentList = getUnitList(activeUnit);
+    currentIndex = 0;
+    showWord(0);
+    buildMultipleChoiceQuestion();
   });
 });
 
@@ -282,10 +329,10 @@ fetch("sat_vocab_core.json")
     if (!vocab.length) {
       vocab = fallbackVocab;
     }
-    // sort alphabetically
+    // sort alphabetically so Units are predictable
     vocab.sort((a, b) => a.word.localeCompare(b.word));
 
-    // default filter = all
+    // default view: all
     currentList = [...vocab];
     showWord(0);
     buildMultipleChoiceQuestion();
