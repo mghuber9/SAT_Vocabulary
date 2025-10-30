@@ -1,0 +1,165 @@
+:root {
+  --bg: #f3f5f9;
+  --card: #ffffff;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.08);
+  --radius: 1.25rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 1.25rem 1.5rem 1rem;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.app {
+  width: min(900px, 100%);
+  margin: 1.5rem auto;
+  padding: 0 1rem 2.5rem;
+  flex: 1;
+}
+
+.modes {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.mode-btn {
+  border: none;
+  background: #e5e7eb;
+  color: #111827;
+  border-radius: 9999px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.mode-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.panel {
+  background: transparent;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem 1.25rem;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(15, 23, 42, 0.03);
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+#word {
+  font-size: clamp(1.75rem, 4vw, 2.3rem);
+  margin: 0;
+}
+
+.pos {
+  margin-top: 0.25rem;
+  color: #6366f1;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+
+#definition-box {
+  margin-top: 1.25rem;
+  background: var(--accent-soft);
+  border-radius: 0.85rem;
+  padding: 1.1rem 1rem 1rem;
+}
+
+#definition-box h3,
+#definition-box h4 {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #111827;
+}
+
+#definition-box p {
+  margin-top: 0.35rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+#shuffle-btn {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.status {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem 1rem 1.5rem;
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
