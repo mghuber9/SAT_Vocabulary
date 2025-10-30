@@ -225,4 +225,37 @@ body {
   background: #111827;
   color: #fff;
 }
+.units {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.units-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #6b7280;
+  letter-spacing: 0.05em;
+  margin-right: 0.25rem;
+}
+
+.unit-btn {
+  border: 1px solid rgba(0,0,0,0.04);
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.unit-btn.active {
+  background: #111827;
+  color: #fff;
+}
+
+.unit-clear {
+  background: #e5e7eb;
+}
 
