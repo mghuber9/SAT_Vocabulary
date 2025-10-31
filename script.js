@@ -345,5 +345,25 @@ fetch("sat_vocab_core.json")
     buildMultipleChoiceQuestion();
   });
 
+// ===== EMAIL SIGNUP (front-end only right now) =====
+const emailForm = document.getElementById("email-form");
+const emailInput = document.getElementById("email-input");
+const emailMessage = document.getElementById("email-message");
+
+if (emailForm) {
+  emailForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+    if (!email) return;
+
+    // TODO: send to Google Form or webhook here
+
+    // temporary success message
+    emailMessage.textContent = "Thanks! You’re on the list 🟢";
+    emailInput.value = "";
+  });
+}
+
+
 // default mode
 setMode("flashcard");
