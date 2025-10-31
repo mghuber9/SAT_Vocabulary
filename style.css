@@ -306,4 +306,23 @@ body {
   margin-top: 0.6rem;
   font-size: 0.8rem;
 }
+.join-link-mobile {
+  display: none;
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 1rem 0 0.25rem;
+  color: #4b5563;
+}
+
+.join-link-mobile a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* show on small screens */
+@media (max-width: 640px) {
+  .join-link-mobile {
+    display: block;
+  }
+}
 
