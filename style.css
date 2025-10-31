@@ -258,4 +258,52 @@ body {
 .unit-clear {
   background: #e5e7eb;
 }
+.email-signup {
+  background: #ffffff;
+  border-top: 1px solid rgba(0,0,0,0.03);
+  padding: 1.75rem 1rem 2rem;
+  text-align: center;
+}
+
+.email-signup h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.email-signup p {
+  margin-top: 0.4rem;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+#email-form {
+  margin-top: 0.9rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+#email-input {
+  min-width: min(280px, 90vw);
+  padding: 0.45rem 0.65rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+}
+
+#email-form button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.45rem 0.95rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.email-message {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+}
 
