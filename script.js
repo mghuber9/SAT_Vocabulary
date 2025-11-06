@@ -345,24 +345,42 @@ fetch("sat_vocab_core.json")
     buildMultipleChoiceQuestion();
   });
 
-// ===== EMAIL SIGNUP (front-end only right now) =====
+// ===== EMAIL SIGNUP → LeadConnector webhook =====
 const emailForm = document.getElementById("email-form");
 const emailInput = document.getElementById("email-input");
 const emailMessage = document.getElementById("email-message");
 
+// put your real LeadConnector webhook / form-capture URL here
+const LC_WEBHOOK_URL = "https://YOUR-LEADCONNECTOR-URL-HERE";
+
 if (emailForm) {
-  emailForm.addEventListener("submit", (e) => {
+  emailForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const email = emailInput.value.trim();
     if (!email) return;
 
-    // TODO: send to Google Form or webhook here
+    try {
+      await fetch(LC_WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: email,
+          source: "sat-vocab-site",
+          tag: "sat-vocab"
+        })
+      });
 
-    // temporary success message
-    emailMessage.textContent = "Thanks! You’re on the list 🟢";
-    emailInput.value = "";
+      emailMessage.textContent = "Thanks! You’re on the list 🟢";
+      emailInput.value = "";
+    } catch (err) {
+      console.warn("LeadConnector submit failed", err);
+      emailMessage.textContent = "Hmm… couldn't submit right now. Try again later.";
+    }
   });
 }
+
 
 
 // default mode
